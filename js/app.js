@@ -9,12 +9,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-    let c = a + b
+    let c = a + b;
     let d = [c, "The sum of " + a + " and " + b + " is " + c + "."]
     return d
 }
 
-testSum (4, 7);
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
@@ -52,12 +51,23 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+console.log(sum(1, 2 )[0]);
+console.log(multiply(1, 2)[0]); 
+
+
+
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+    let sum1 = sum(a, b)[0];
+    let finalSum = sum(sum1, c)[0];
+    let product1 = multiply(a, b)[0];
+    let finalProduct = multiply(product1, c)[0];
+    let array = [finalSum, finalProduct, a + " and " + b + " and " + c + " sum to " + finalSum + ".", "The product of " + a + " and " + b + " and " + c + " is " + finalProduct + "."]
+    return array;
 }
-
+sumAndMultiply(1,2,3);
+console.log(sumAndMultiply(1, 2));
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
